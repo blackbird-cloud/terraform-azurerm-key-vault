@@ -69,7 +69,7 @@ resource "azurerm_key_vault_key" "default" {
   expiration_date = each.value.expiration_date
 
   dynamic "rotation_policy" {
-    for_each = each.value.rotation_policy == null ? {} : { each.value.name = each.value.rotation_policy }
+    for_each = each.value.rotation_policy == null ? {} : { "each.value.name" = each.value.rotation_policy }
 
     content {
       automatic {

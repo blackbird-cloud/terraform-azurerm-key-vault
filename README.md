@@ -6,7 +6,8 @@ A Terraform module which configures your Azure Key Vault.
 ```hcl
 
 module "azurerm_key_vault" {
-  source = "../"
+  source  = "blackbird-cloud/key-vault/azurerm"
+  version = "~> 1"
 
   name                          = "example-key-vault"
   location                      = "westeurope"
